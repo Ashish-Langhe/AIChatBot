@@ -15,14 +15,13 @@ final class ViewModel: ObservableObject {
     private var client: OpenAISwift?
     
     func setup() {
-        client = OpenAISwift(config: OpenAISwift.Config.makeDefaultOpenAI(apiKey: "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"))
+        client = OpenAISwift(config: OpenAISwift.Config.makeDefaultOpenAI(apiKey: "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"))
     }
     
     func send(text: String, completion: @escaping (String) -> Void) {
         client?.sendCompletion(with: text, maxTokens: 500, completionHandler: { result in
             switch result {
             case .success(let model):
-                
                 let output = model.choices?.first?.text ?? ""
                 completion(output)
             case .failure:
@@ -42,10 +41,7 @@ struct ContentView: View {
             ForEach(models.indices, id: \.self) { index in
                 Text(models[index])
             }
-//            ForEach (models, id:\.self) { string in
-//                Text(string)
-//            }
-//            
+            
             Spacer()
             
             HStack {
@@ -65,12 +61,12 @@ struct ContentView: View {
         guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-
-        models.append("Me: \(text)")
+        
+        models.append("\nMe: \(text)")
         viewModel.send(text: text) { response in
             DispatchQueue.main.async {
-                print("API Response: \(response)") // Print the response
-                self.models.append("ChatGPT: \(response)")
+                print("\nAPI Response: \(response)") // Print the response
+                self.models.append("\nChatGPT: \(response)")
                 self.text = ""
             }
         }
