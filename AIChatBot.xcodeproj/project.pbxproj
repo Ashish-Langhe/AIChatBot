@@ -15,6 +15,9 @@
 		90265E0C2AFB4211009EF9C4 /* AIChatBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90265E0B2AFB4211009EF9C4 /* AIChatBotUITests.swift */; };
 		90265E0E2AFB4211009EF9C4 /* AIChatBotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90265E0D2AFB4211009EF9C4 /* AIChatBotUITestsLaunchTests.swift */; };
 		90265E1E2AFC0706009EF9C4 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 90265E1D2AFC0706009EF9C4 /* OpenAISwift */; };
+		90265E262AFC589A009EF9C4 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90265E252AFC589A009EF9C4 /* ContentViewModel.swift */; };
+		90265E282AFC5A45009EF9C4 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90265E272AFC5A45009EF9C4 /* ChatView.swift */; };
+		90265E2A2AFC5A5F009EF9C4 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90265E292AFC5A5F009EF9C4 /* MessageInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		90265E072AFB4211009EF9C4 /* AIChatBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90265E0B2AFB4211009EF9C4 /* AIChatBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatBotUITests.swift; sourceTree = "<group>"; };
 		90265E0D2AFB4211009EF9C4 /* AIChatBotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIChatBotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		90265E252AFC589A009EF9C4 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentViewModel.swift; path = ../../../../Documents/ContentViewModel.swift; sourceTree = "<group>"; };
+		90265E272AFC5A45009EF9C4 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = ../../../../.Trash/AIChatBot/AIChatBot/View/ChatView.swift; sourceTree = "<group>"; };
+		90265E292AFC5A5F009EF9C4 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +102,8 @@
 		90265DEF2AFB420E009EF9C4 /* AIChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				90265DF02AFB420E009EF9C4 /* AIChatBotApp.swift */,
-				90265DF22AFB420E009EF9C4 /* ContentView.swift */,
+				90265E242AFC587E009EF9C4 /* View */,
+				90265E232AFC5874009EF9C4 /* ViewModel */,
 				90265DF42AFB4211009EF9C4 /* Assets.xcassets */,
 				90265DF62AFB4211009EF9C4 /* Preview Content */,
 			);
@@ -127,6 +133,25 @@
 				90265E0D2AFB4211009EF9C4 /* AIChatBotUITestsLaunchTests.swift */,
 			);
 			path = AIChatBotUITests;
+			sourceTree = "<group>";
+		};
+		90265E232AFC5874009EF9C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				90265E252AFC589A009EF9C4 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		90265E242AFC587E009EF9C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				90265DF02AFB420E009EF9C4 /* AIChatBotApp.swift */,
+				90265DF22AFB420E009EF9C4 /* ContentView.swift */,
+				90265E272AFC5A45009EF9C4 /* ChatView.swift */,
+				90265E292AFC5A5F009EF9C4 /* MessageInputView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90265E282AFC5A45009EF9C4 /* ChatView.swift in Sources */,
+				90265E2A2AFC5A5F009EF9C4 /* MessageInputView.swift in Sources */,
 				90265DF32AFB420E009EF9C4 /* ContentView.swift in Sources */,
 				90265DF12AFB420E009EF9C4 /* AIChatBotApp.swift in Sources */,
+				90265E262AFC589A009EF9C4 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
